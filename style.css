@@ -15,7 +15,7 @@
 
 body{
     background-color: #fff;
-    width: 100vw;
+    width: 100%;
 }
 
 /*nav bar*/
@@ -88,6 +88,7 @@ nav a{
     justify-content: center;
     flex-direction: column;
     color: var(--grey1);
+    padding-right: 20px;
 }
 
 .banner h1{
@@ -252,7 +253,7 @@ nav a{
     grid-template-columns: 3fr 2fr;
 }
 
-.ex-left img{
+.ex-left video{
     width: 100%;
     height: auto;
     padding: 0 24px 24px 24px; 
@@ -290,4 +291,131 @@ footer{
 footer > ul{
     display: flex;
     list-style: none;
+}
+
+/*breakpoints*/
+
+@media only screen and (width > 768px){
+    .small-nav{
+        display: none;
+    }
+
+    .tab .tab-sm-img{
+        display: none;
+    }
+
+    .start-l-sm{
+        display: none;
+    }
+}
+
+@media only screen and (width <= 768px){
+    .logo, .nav-ul{
+        display: none;
+    }
+
+    .small-nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 10px;
+    }
+
+    .small-nav img{
+        width: 35px;
+        height: auto;
+    }
+
+    .banner{
+        flex-direction: column;
+    }
+
+    .banner img{
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    .banner-cont{
+        padding-bottom: 32px;
+    }
+
+    .ar-left{
+        display: none;
+    }
+
+    .article{
+        grid-template-columns: 1fr;
+    }
+
+    .tab{
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+    .tab .tab-img{
+        display: none;
+    }
+
+    .tab-sm-img > img{
+        height: auto;
+        max-width: 100%;
+    }
+
+    .start-l{
+        background-color: var(--grey4);
+        border-top: 1px solid var(--grey3);
+        padding-bottom: 24px;
+    }
+
+    .start-l > .start-l-grid{
+        display: none;
+    }
+
+    .start-l-sm > * {
+        background-color: var(--grey4);
+        color: var(--grey1);
+        height: 32px;
+        margin: 8px;
+        text-decoration: none;
+    }
+
+    .start-l-sm h1 {
+        background-color: var(--grey3);
+        font-weight: 500;
+        padding: 24px;
+        margin: 0 16px;
+    }
+
+    .thesis-ex{
+        border-top: 1px solid var(--grey3);
+    }
+
+    .exhibit{
+        grid-template-columns: 1fr;
+        padding-bottom: 24px;
+    }
+
+    .ex-left > div{
+        margin-right: 24px;
+        padding-right: 24px;
+    }
+
+    .ex-left > h1, .ex-left > p{
+        display: none;
+    }
+
+    .ex-right{
+        display: none;
+    }
+
+    footer{
+        font-weight: 300;
+    }
+
+    footer > ul{
+        display: none;
+    }
 }
